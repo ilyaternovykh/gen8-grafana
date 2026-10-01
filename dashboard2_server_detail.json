@@ -140,7 +140,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -236,7 +236,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -332,7 +332,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -428,7 +428,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -524,7 +524,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -620,7 +620,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -716,7 +716,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -812,7 +812,7 @@
           "limit": 1
         },
         "orientation": "auto",
-        "textMode": "auto",
+        "textMode": "name",
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto"
@@ -1089,7 +1089,7 @@
           "expr": "max(hpilo_vrm_status{server_name=~\"$server\"} or hpilo_drive_status{server_name=~\"$server\"} or hpilo_battery_status{server_name=~\"$server\"})",
           "instant": true,
           "range": false,
-          "legendFormat": " худший из VRM/Drive/Battery"
+          "legendFormat": "__auto"
         }
       ]
     },
@@ -1150,7 +1150,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(hpilo_power_supply_status{server_name=~\"$server\"} * on(ps, server_name) group_left(capacity_w) hpilo_power_supply_status)",
+          "expr": "sum(max by (ps, capacity_w) (hpilo_power_supply_status{server_name=~\"$server\"} * on(ps, server_name) group_left(capacity_w) hpilo_power_supply_status))",
           "instant": true,
           "range": false,
           "legendFormat": "__auto",

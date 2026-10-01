@@ -485,7 +485,7 @@
             },
             "renameByName": {
               "Value": "Статус",
-              "__name__": "Компонент",
+              "__name__": "Показатель",
               "server_name": "Сервер",
               "sensor": "Датчик",
               "fan": "Вентилятор",
@@ -527,7 +527,29 @@
             "inspect": false,
             "filterable": true
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "id": 0,
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "OK",
+                  "color": "green",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Warning",
+                  "color": "yellow",
+                  "index": 1
+                },
+                "2": {
+                  "text": "Critical",
+                  "color": "red",
+                  "index": 2
+                }
+              }
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -568,6 +590,32 @@
                 "value": {
                   "mode": "thresholds"
                 }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "id": 0,
+                    "type": "value",
+                    "options": {
+                      "0": {
+                        "text": "OK",
+                        "color": "green",
+                        "index": 0
+                      },
+                      "1": {
+                        "text": "Warning",
+                        "color": "yellow",
+                        "index": 1
+                      },
+                      "2": {
+                        "text": "Critical",
+                        "color": "red",
+                        "index": 2
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -705,7 +753,12 @@
         "valueMode": "color",
         "minLength": 0,
         "sizingMode": "auto",
-        "textMode": "auto"
+        "textMode": "auto",
+        "legend": {
+          "showLegend": false,
+          "displayMode": "list",
+          "placement": "bottom"
+        }
       },
       "targets": [
         {
@@ -747,7 +800,29 @@
             "inspect": false,
             "filterable": true
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "id": 0,
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "OK",
+                  "color": "green",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Warning",
+                  "color": "yellow",
+                  "index": 1
+                },
+                "2": {
+                  "text": "Critical",
+                  "color": "red",
+                  "index": 2
+                }
+              }
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -788,6 +863,32 @@
                 "value": {
                   "mode": "thresholds"
                 }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "id": 0,
+                    "type": "value",
+                    "options": {
+                      "0": {
+                        "text": "OK",
+                        "color": "green",
+                        "index": 0
+                      },
+                      "1": {
+                        "text": "Warning",
+                        "color": "yellow",
+                        "index": 1
+                      },
+                      "2": {
+                        "text": "Critical",
+                        "color": "red",
+                        "index": 2
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -885,7 +986,29 @@
             "inspect": false,
             "filterable": true
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "id": 0,
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "OK",
+                  "color": "green",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Warning",
+                  "color": "yellow",
+                  "index": 1
+                },
+                "2": {
+                  "text": "Critical",
+                  "color": "red",
+                  "index": 2
+                }
+              }
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -926,6 +1049,32 @@
                 "value": {
                   "mode": "thresholds"
                 }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "id": 0,
+                    "type": "value",
+                    "options": {
+                      "0": {
+                        "text": "OK",
+                        "color": "green",
+                        "index": 0
+                      },
+                      "1": {
+                        "text": "Warning",
+                        "color": "yellow",
+                        "index": 1
+                      },
+                      "2": {
+                        "text": "Critical",
+                        "color": "red",
+                        "index": 2
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -1120,7 +1269,7 @@
             },
             "renameByName": {
               "Value": "Статус",
-              "__name__": "Компонент",
+              "__name__": "Метрика",
               "server_name": "Сервер",
               "sensor": "Датчик",
               "fan": "Вентилятор",
